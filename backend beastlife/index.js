@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-// mongoose.connect('mongodb+srv://aditya:aditya123@cluster0.jdnbg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 mongoose.connect('mongodb://localhost:27017/beastlife');
 
 // Define User Schema
@@ -44,11 +43,16 @@ const Product = mongoose.model('Product', productSchema);
 // Create some sample products (Run this once to add products)
 // const createProducts = async () => {
 //     const products = [
-//         { name: 'Whey-Gold with Ultrasorb Tech | 1848G', price: 3299, description: '', image: 'https://raw.githubusercontent.com/aditya000099/BeastLife-Nutrition/main/assets/images/Whey%20Protein.jpg' },
-//         { name: 'Daily Multivitamin 90 Tablets', price: 999, description: '', image: 'https://raw.githubusercontent.com/aditya000099/BeastLife-Nutrition/main/assets/images/Multivitamin.jpg' },
-//         { name: 'Ayurveda for Performance Ashwagandha', price: 899, description: '', image: 'https://raw.githubusercontent.com/aditya000099/BeastLife-Nutrition/main/assets/images/Ashwagandha.jpg' },
-//         { name: 'Creatine + Pre-Workout(500mg Caffeine)', price: 1049, description: '', image: 'https://raw.githubusercontent.com/aditya000099/BeastLife-Nutrition/main/assets/images/creatine.jpg' },
-//         { name: 'Vegan Protein', price: 2999, description: '', image: 'https://raw.githubusercontent.com/aditya000099/BeastLife-Nutrition/main/assets/images/Vegan_Protein.jpg' },
+//         { name: 'Whey-Gold with Ultrasorb Tech | 1848G', price: 3299, description: '', image: 'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Whey%20Protein.jpg' },
+//         { name: 'BeastLife Blend Pro Sipper with Straw | 1000ML', price: 899, description: '', image: 'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Sipper.png' },
+//         { name: 'Daily Multivitamin 90 Tablets', price: 999, description: '', image: 'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Multivitamin.jpg' },
+//         { name: 'Ayurveda for Performance Ashwagandha', price: 899, description: '', image: 'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Ashwagandha.jpg' },
+//         { name: 'Creatine + Pre-Workout(500mg Caffeine)', price: 1049, description: '', image: 'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/creatine.jpg' },
+//         { name: 'Vegan Protein', price: 2999, description: '', image: 'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Vegan_Protein.jpg' },
+//         {name: 'Omega 3 Fish Oil with 180mg EPA and 120mg DHA', price: 699, description: '', image:'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Fish_Oil.jpg' },
+//         {name: 'Super Micronized Creatine Monohydrate', price: 1199, description: '', image:'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Micronized_Monohydrate.png' },
+//         {name: 'Isorich Blend Whey Protein with Ultrasorb Tech | 924G', price: 3499,description: '', image:'https://raw.githubusercontent.com/drishya700/BeastLife-Nutrition/refs/heads/master/assets/images/Isorich_Blend_Whey.png' }
+
 //     ];
 
 //     await Product.insertMany(products);
